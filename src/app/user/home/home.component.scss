@@ -1,0 +1,119 @@
+.hero-content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+
+  &.fix-content {
+    background-attachment: fixed;
+
+    &:before {
+      opacity: 0.8;
+    }
+
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: var(--linear-gradient);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+}
+
+.linear-background {
+  background-image: var(--linear-gradient);
+}
+
+.hover-box {
+  transition: 0.3s all ease-in-out;
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1.05);
+    transition: 0.3s all ease-in-out;
+  }
+
+}
+
+.about-content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.pricing-and-package {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--bs-white);
+  box-shadow: var(--loading-bg-color);
+  animation: l2 1.5s infinite linear;
+  position: relative;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: var(--loading-bg-color);
+  animation: inherit;
+  animation-delay: -0.5s;
+}
+.loader:after {
+  animation-delay: -1s;
+}
+@keyframes l2 {
+  100% {box-shadow: 0 0 0 40px #0000}
+}
+
+.team {
+  transition: 0.3s all ease-in-out;
+
+  &:hover {
+    transition: 0.3s all ease-in-out;
+    .team-hover {
+      opacity: 1;
+      transition: 0.3s all ease-in-out;
+      .text-glitch {
+        transition: 0.3s all ease-in-out;
+        margin-top: 0;
+      }
+
+    }
+  }
+
+  .team-hover {
+    transition: 0.3s all ease-in-out;
+    background-image: var(--linear-gradient);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    .text-glitch {
+      transition: 0.3s all ease-in-out;
+      margin-top: 120px;
+    }
+
+  }
+
+}

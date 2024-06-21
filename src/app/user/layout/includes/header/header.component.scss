@@ -1,0 +1,15 @@
+.navbar {
+  transition: 0.3s all ease-in-out !important;
+  font-size: 18px !important;
+
+  @media screen and (max-width: 991px) {
+    background-image: linear-gradient(to right, rgba(32, 40, 119, 1), rgba(55, 46, 149, 1), rgba(83, 49, 177, 1), rgba(114, 48, 205, 1), rgba(150, 41, 230, 1)) !important;
+  }
+
+
+  &.scroll-background {
+    transition: 0.3s all ease-in-out !important;
+    background-image: linear-gradient(to right, rgba(32, 40, 119, 1), rgba(55, 46, 149, 1), rgba(83, 49, 177, 1), rgba(114, 48, 205, 1), rgba(150, 41, 230, 1)) !important;
+  }
+
+}

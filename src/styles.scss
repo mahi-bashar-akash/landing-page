@@ -1,1 +1,136 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --linear-gradient: linear-gradient(to right, rgba(32, 40, 119, 0.95), rgba(55, 46, 149, 0.95), rgba(83, 49, 177, 0.90), rgba(114, 48, 205, 0.85), rgba(150, 41, 230, 0.95));
+  --theme: #9629e6;
+  --second-theme: #6730e3;
+  --loading-bg-color: 0 0 0 0 rgba(255, 255, 255, 0.3);
+}
+
+body {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+$iteration: 2560;
+$base-value: 1px;
+@for $i from 1 through $iteration {
+  .width-#{$i} { width: $base-value * $i !important; }
+  .height-#{$i} { height: $base-value * $i !important; }
+  .height-calc-#{$i} { height: calc(100vh - $base-value * $i) !important; }
+  .min-width-#{$i} { min-width: $base-value * $i !important }
+}
+
+.text-theme {
+  color: var(--theme) !important;
+}
+
+.btn-theme {
+  transition: 0.3s all ease-in-out !important;
+  background: var(--second-theme) !important;
+  border: 3px solid var(--second-theme) !important;
+  color: var(--bs-white) !important;
+
+  &:hover {
+    background: var(--bs-white) !important;
+    color: var(--second-theme) !important;
+    border-color: var(--second-theme) !important;
+  }
+
+}
+
+.btn-outline-light-theme {
+  color: var(--bs-white) !important;
+  border: 3px solid var(--bs-white) !important;
+  transition: 0.3s all ease-in-out !important;
+
+  &:hover {
+    background: var(--bs-white) !important;
+    color: var(--second-theme) !important;
+    transition: 0.3s all ease-in-out !important;
+  }
+
+}
+
+.btn-outline-theme {
+  color: var(--second-theme) !important;
+  transition: 0.3s all ease-in-out !important;
+  border: 3px solid var(--second-theme) !important;
+  background-color: var(--bs-white) !important;
+
+  &:hover {
+    color: var(--bs-white) !important;
+    transition: 0.3s all ease-in-out !important;
+    border: 3px solid var(--second-theme) !important;
+    background-color: var(--second-theme) !important;
+  }
+
+}
+
+.accordion {
+  overflow: hidden;
+
+  .accordion-item {
+    .accordion-header {
+      .accordion-button:not(.collapsed) {
+        background-color: var(--second-theme) !important;
+        color: var(--bs-white) !important;
+      }
+
+      .accordion-button {
+        box-shadow: 0 0 0 0 !important;
+        font-weight: 700 !important;
+
+        &:after {
+          background-image: none !important;
+        }
+      }
+    }
+
+    .accordion-body {
+
+    }
+  }
+}
+
+.line-height-2 {
+  line-height: 2;
+}
+
+.truncate-to-1-line {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.truncate-to-2-line {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-hover {
+  color: var(--bs-secondary);
+  transition: 0.3s all ease-in-out;
+  font-weight: 600;
+
+  i {
+    transition: 0.3s all ease-in-out;
+    margin-left: 0;
+  }
+
+  &:hover {
+    transition: 0.3s all ease-in-out;
+    i {
+      margin-left: 10px;
+    }
+  }
+
+}
+
+.form-textarea {
+  outline: none;
+}
